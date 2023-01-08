@@ -1,4 +1,4 @@
-package Inheritance;
+package Inheritance.dto;
 import java.time.*;
 
 public class Employee
@@ -6,11 +6,17 @@ public class Employee
     private String name;
     private Double salary;
     private LocalDate hireDay;
+    private Department dept;
 
-    public Employee(String name, Double salary, int year, int month, int day) {
+    public Department getDept() {
+        return dept.clone();
+    }
+
+    public Employee(String name, Double salary, int year, int month, int day,Department dept) {
         this.name = name;
         this.salary = salary;
         this.hireDay = LocalDate.of( year, month, day);
+        this.dept=dept;
     }
 
     public String getName() {

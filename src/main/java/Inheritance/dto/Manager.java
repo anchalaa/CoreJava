@@ -1,4 +1,6 @@
-package Inheritance;
+package Inheritance.dto;
+
+import Inheritance.dto.Employee;
 
 public class Manager extends Employee
 {
@@ -6,7 +8,7 @@ public class Manager extends Employee
 
     public Manager(String name, Double salary, int year, int month, int day)
     {
-        super(name, salary, year, month, day);
+        super(name, salary, year, month, day,new Department().setName("HR"));
         bonus = 0;
     }
 
